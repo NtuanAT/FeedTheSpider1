@@ -148,3 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 1, z: 0}
   speed: 25
+  animationSprites:
+  - {fileID: -1968817697, guid: f952df908b0967b41a97282fba14ca95, type: 3}
+  animationTime: 0.3

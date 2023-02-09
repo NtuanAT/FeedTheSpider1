@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6932426597522279719
+--- !u!1 &8085196204144134677
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6932426597522279717}
-  - component: {fileID: 6932426597522279718}
-  - component: {fileID: 6932426597522279716}
-  - component: {fileID: 6502010678094936261}
-  m_Layer: 7
-  m_Name: Enemy
+  - component: {fileID: 7905797065495739583}
+  - component: {fileID: 634260180322476776}
+  - component: {fileID: 5939475888641312812}
+  m_Layer: 0
+  m_Name: QueenHornet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6932426597522279717
+--- !u!4 &7905797065495739583
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6932426597522279719}
+  m_GameObject: {fileID: 8085196204144134677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.94, y: 4.53, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6932426597522279718
+--- !u!212 &634260180322476776
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6932426597522279719}
+  m_GameObject: {fileID: 8085196204144134677}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,55 +74,32 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 4ebe7b66e6e69ae48b528d523818bee5, type: 3}
-  m_Color: {r: 1, g: 0.009601215, b: 0, a: 1}
+  m_Sprite: {fileID: -352424172, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.37, y: 0.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6932426597522279716
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6932426597522279719}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &6502010678094936261
+--- !u!114 &5939475888641312812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6932426597522279719}
+  m_GameObject: {fileID: 8085196204144134677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017111dc2c6fc8e4a94a3ae8d10023a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d1c118b632629647ba267e45b17a112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationSprites: []
-  animationTime: 1
-  Coin: {fileID: 5940469792281467255, guid: d07b7ffcec747da41bcc8a1aa8bc6020, type: 3}
+  animationSprites:
+  - {fileID: -352424172, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
+  - {fileID: 345943661, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
+  - {fileID: 957867216, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
+  - {fileID: 1552502319, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
+  animationTime: 0.2

@@ -105,6 +105,10 @@ public class Player : MonoBehaviour
                 playerIsAlive = false;
             }
         }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Reward"))
+        {
+            logic.Score(500);
+        }
     }
     
 }

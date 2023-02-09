@@ -7,10 +7,16 @@ using UnityEngine.UI;
 public class LogicScript : MonoBehaviour
 {
     public int playerLife;
+    public int playerScore;
+    public Text txtScore;
     public Text txtLife;
     public GameObject gameOverScreen;
     
-
+    public void Score(int point)
+    {
+        playerScore += point;
+        txtScore.text = playerScore.ToString();
+    }
     public void LoseLife(int health)
     {
         playerLife -= health;
