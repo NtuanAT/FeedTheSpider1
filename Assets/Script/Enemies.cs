@@ -44,9 +44,11 @@ public class Enemies : MonoBehaviour
             }
         }
     }
+    public LogicScript logic;
     // Start is called before the first frame update
     void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         // Drop Poop Invoked
         InvokeRepeating(nameof(PoopDrop), this.dropRate, this.dropRate);
     }
@@ -109,7 +111,7 @@ public class Enemies : MonoBehaviour
         this.amountKilled++;
         if(this.amountKilled >= this.total)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            logic.WinGame();
         }
     }
 }

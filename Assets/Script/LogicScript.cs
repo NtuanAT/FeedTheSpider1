@@ -11,6 +11,7 @@ public class LogicScript : MonoBehaviour
     public Text txtScore;
     public Text txtLife;
     public GameObject gameOverScreen;
+    public GameObject gameWinScreen;
     
     public void Score(int point)
     {
@@ -25,6 +26,10 @@ public class LogicScript : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
+    }
+    public void WinGame()
+    {
+        gameWinScreen.SetActive(true);
     }
     public void RestartGame()
     {
