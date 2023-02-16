@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEngine.UIElements;
 
 public class QueenHornet : MonoBehaviour
 {
@@ -11,13 +12,15 @@ public class QueenHornet : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private int _animationIndex;
-    
+
+    private Vector3 destinition;
+    private float moveRate;
+    private float moveSpeed;
+
     LogicScript logic;
 
     public int HitPoint { get; set; }
     public float fireRate;
-    private float speed;
-    private float moveRate;
     private Camera cam;
 
     private void AnimateSprite()
@@ -42,15 +45,17 @@ public class QueenHornet : MonoBehaviour
     {
         InvokeRepeating(nameof(AnimateSprite), this.animationTime, this.animationTime);
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        this.speed = 80.0f;
+        this.moveSpeed = 0.5f;
         moveRate = 5.0f;
         Grow();
+        QueenMove();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Vector3 direction = destinition - this.transform.position;
+        this.transform.position += moveSpeed * Time.deltaTime * direction;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,7 +64,7 @@ public class QueenHornet : MonoBehaviour
         {
             this.HitPoint -= 1;
             CancelInvoke(nameof(PoopDrop));
-            CancelInvoke(nameof(Regularmove));
+            QueenMove();
             Grow();
             var die = DieYet();
             if (die)
@@ -80,7 +85,6 @@ public class QueenHornet : MonoBehaviour
     {
         Rage();
         InvokeRepeating(nameof(PoopDrop), 0.0f, this.fireRate);
-        InvokeRepeating(nameof(Regularmove), 0.0f, this.moveRate);
     }
     #endregion
 
@@ -93,27 +97,26 @@ public class QueenHornet : MonoBehaviour
     public void Rage()
     {
         fireRate = (float)this.HitPoint / (float)10.0f;
-        this.speed += 10;
-        this.moveRate -= 0.4f;
+        this.moveSpeed += 0.1f;
+        this.moveRate -= 0.45f;
     }
     #endregion
 
     #region Move
-    private void Move(Vector3 direction, float speed)
-    {
-        this.transform.position += speed * Time.deltaTime * direction;
-    }
-    private void Regularmove()
-    {
-        var position = GetRandomPosition();
-        Vector3 direction = position - this.transform.position;
-        Move(direction, this.speed);
-    }
     private Vector3 GetRandomPosition()
     {
         var randomposition = Camera.main.ViewportToWorldPoint(new Vector3(Random.value, Random.value, 0));
         randomposition.z = 0;
         return randomposition;
+    }
+    private void Move()
+    {
+        this.destinition = this.GetRandomPosition();
+    }
+    private void QueenMove()
+    {
+        CancelInvoke(nameof(Move));
+        InvokeRepeating(nameof(Move),0, this.moveRate);
     }
     #endregion
 }
