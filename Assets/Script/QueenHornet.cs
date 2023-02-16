@@ -19,8 +19,8 @@ public class QueenHornet : MonoBehaviour
 
     LogicScript logic;
 
-    public int HitPoint { get; set; }
-    public float fireRate;
+    private int HitPoint;
+    private float fireRate;
     private Camera cam;
 
     private void AnimateSprite()
@@ -38,7 +38,7 @@ public class QueenHornet : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         cam = Camera.main;
         this.HitPoint = 10;
-        this.fireRate = 1.0f;
+        this.fireRate = 2.2f;
     }
     // Start is called before the first frame update
     void Start()
@@ -96,7 +96,7 @@ public class QueenHornet : MonoBehaviour
     }
     public void Rage()
     {
-        fireRate = (float)this.HitPoint / (float)10.0f;
+        fireRate -= 0.19f;
         this.moveSpeed += 0.1f;
         this.moveRate -= 0.45f;
     }
