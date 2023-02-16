@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+         
 
     }
     // Start is called before the first frame update

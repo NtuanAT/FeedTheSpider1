@@ -12,7 +12,11 @@ public class LogicScript : MonoBehaviour
     public Text txtLife;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
-    
+    public AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
     public void Score(int point)
     {
         playerScore += point;
@@ -25,10 +29,14 @@ public class LogicScript : MonoBehaviour
     }
     public void GameOver()
     {
+        audioManager.Stop("Theme");
+        audioManager.Play("GameOver");
         gameOverScreen.SetActive(true);
     }
     public void WinGame()
     {
+        audioManager.Stop("Theme");
+        audioManager.Play("WinGame");
         gameWinScreen.SetActive(true);
     }
     public void RestartGame()

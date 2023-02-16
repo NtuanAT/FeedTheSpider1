@@ -12,11 +12,14 @@ public class Player : MonoBehaviour
     private bool _webActive;
     public LogicScript logic;
     private bool playerIsAlive = true;
+    
+
 
     // Awake
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     // Start is called before the first frame update
@@ -45,6 +48,8 @@ public class Player : MonoBehaviour
 
         _spriteRenderer.sprite = this.animationSprites[_animationIndex];
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -102,6 +107,7 @@ public class Player : MonoBehaviour
             if (logic.playerLife<=0)
             {
                 logic.GameOver();
+                
                 playerIsAlive = false;
             }
         }

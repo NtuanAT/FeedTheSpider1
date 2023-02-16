@@ -14,9 +14,7 @@ public class Enemies : MonoBehaviour
     // Enemy Type Array
     public Enemy[] enemies;
     
-    // Poop Drop Attribute
-    public float dropRate = 1.0f;
-    public Projectile poopPrefab;
+    
 
     // Calculate Enemies
     public int total => this.rows * this.columns;
@@ -87,6 +85,10 @@ public class Enemies : MonoBehaviour
         position.y -= 1.0f;
         this.transform.position = position;
     }
+
+    // Poop Drop Attribute
+    public float dropRate = 1.0f;
+    public Projectile poopPrefab;
     // Drop Poop 
     private void PoopDrop()
     {
