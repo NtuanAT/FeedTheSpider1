@@ -12,14 +12,15 @@ public class Player : MonoBehaviour
     private bool _webActive;
     public LogicScript logic;
     private bool playerIsAlive = true;
-    
+    [HideInInspector]
+    public AudioManager audioManager;
 
 
     // Awake
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        audioManager = FindObjectOfType<AudioManager>();        
     }
 
     // Start is called before the first frame update
@@ -104,16 +105,19 @@ public class Player : MonoBehaviour
             collision.gameObject.layer == LayerMask.NameToLayer("Poop"))
         {
             logic.LoseLife(1);
+            audioManager.Play("Hurt");
             if (logic.playerLife<=0)
             {
                 logic.GameOver();
                 
                 playerIsAlive = false;
+                this.gameObject.SetActive(false);
             }
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Reward"))
         {
             logic.Score(500);
+            audioManager.Play("Score");
         }
     }
     

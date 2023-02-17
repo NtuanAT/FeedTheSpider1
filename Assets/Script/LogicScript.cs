@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +14,19 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
     public AudioManager audioManager;
+
+    public string[] sceneNames;
+    private string _thisSceneName, _nextSceneName; 
     private void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();
+        _thisSceneName = SceneManager.GetActiveScene().name;
+        int i = Array.FindIndex<string>(sceneNames, s => s == _thisSceneName);
+        if(i < sceneNames.Length - 1)
+        {
+            _nextSceneName = sceneNames[i+1];
+        }
+        
     }
     public void Score(int point)
     {
@@ -29,18 +40,23 @@ public class LogicScript : MonoBehaviour
     }
     public void GameOver()
     {
-        audioManager.Stop("Theme");
+        audioManager.Stop(audioManager.theme);
         audioManager.Play("GameOver");
         gameOverScreen.SetActive(true);
     }
     public void WinGame()
     {
-        audioManager.Stop("Theme");
+        audioManager.Stop(audioManager.theme);
         audioManager.Play("WinGame");
         gameWinScreen.SetActive(true);
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(_thisSceneName);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(_nextSceneName);
     }
 }

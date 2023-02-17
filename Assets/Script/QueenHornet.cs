@@ -18,7 +18,7 @@ public class QueenHornet : MonoBehaviour
     private float moveSpeed;
 
     LogicScript logic;
-
+    AudioManager audioManager;
     private int HitPoint;
     private float fireRate;
     private Camera cam;
@@ -39,6 +39,7 @@ public class QueenHornet : MonoBehaviour
         cam = Camera.main;
         this.HitPoint = 10;
         this.fireRate = 2.2f;
+        audioManager = FindObjectOfType<AudioManager>();
     }
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,7 @@ public class QueenHornet : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Web"))
         {
             this.HitPoint -= 1;
+            audioManager.Play("Ouch");
             CancelInvoke(nameof(PoopDrop));
             QueenMove();
             Grow();

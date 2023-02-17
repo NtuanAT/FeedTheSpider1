@@ -25,12 +25,12 @@ public class Enemies : MonoBehaviour
     // Awake
     private void Awake()
     {
+        float width = space * (this.columns - 1);
+        float height = space * (this.rows - 1);
+        Vector2 centering = new(-width / 2, -height / 2);
         // Spawn Enemies into the Grid
         for (int row = 0; row < this.rows; row++)
-        {
-            float width = space * (this.columns - 1);
-            float height = space * (this.rows - 1);
-            Vector2 centering = new(-width / 2, -height / 2);
+        {            
             Vector3 rowPosition = new Vector3(centering.x, centering.y + row * space, 0.0f);
             for (int column = 0; column < this.columns; column++)
             {
