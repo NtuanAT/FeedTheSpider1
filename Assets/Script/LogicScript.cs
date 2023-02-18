@@ -13,6 +13,7 @@ public class LogicScript : MonoBehaviour
     public Text txtLife;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
+    public GameObject warningSignal;
     public AudioManager audioManager;
 
     public string[] sceneNames;
@@ -27,6 +28,13 @@ public class LogicScript : MonoBehaviour
             _nextSceneName = sceneNames[i+1];
         }
         
+    }
+    public void Warning()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButtonDown(0))
+        {
+            warningSignal.SetActive(false);
+        }
     }
     public void Score(int point)
     {

@@ -45,9 +45,9 @@ public class QueenHornet : MonoBehaviour
     void Start()
     {
         InvokeRepeating(nameof(AnimateSprite), this.animationTime, this.animationTime);
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();        
         this.moveSpeed = 0.5f;
-        moveRate = 5.0f;
+        moveRate = 5.0f;        
         Grow();
         QueenMove();
     }

@@ -260,6 +260,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1794775000}
     - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
+      propertyPath: warningSignal
+      value: 
+      objectReference: {fileID: 1501191334}
+    - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1242792973}
@@ -1172,6 +1176,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464580661}
   m_CullTransparentMesh: 1
+--- !u!1 &1501191334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 168273547305776769, guid: 12828f2665d13c847be737006341ccbb, type: 3}
+  m_PrefabInstance: {fileID: 1667007568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1521389757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1477,10 @@ PrefabInstance:
     - target: {fileID: 168273547305776769, guid: 12828f2665d13c847be737006341ccbb, type: 3}
       propertyPath: m_Name
       value: Warning
+      objectReference: {fileID: 0}
+    - target: {fileID: 168273547305776769, guid: 12828f2665d13c847be737006341ccbb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007185772953880519, guid: 12828f2665d13c847be737006341ccbb, type: 3}
       propertyPath: m_RootOrder
