@@ -63,7 +63,9 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
+ProjectSettings/ProjectVersion.txt
+Packages/packages-lock.json
+UserSettings/Layouts/default-2021.dwlt
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
