@@ -67,4 +67,9 @@ public class LogicScript : MonoBehaviour
     {
         SceneManager.LoadScene(_nextSceneName);
     }
+
+    public void PauseGame()
+    {
+        
+    }
 }

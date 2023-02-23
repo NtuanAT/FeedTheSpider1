@@ -29,6 +29,9 @@ public class AudioManager : MonoBehaviour
             case "Level1":
                 this.theme = "Theme1";
                 break;
+            case "Level2":
+                this.theme = "Theme2";
+                break;
             case "LevelHell":
                 this.theme = "Theme3";
                 break;
