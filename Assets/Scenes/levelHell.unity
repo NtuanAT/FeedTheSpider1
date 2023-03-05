@@ -672,10 +672,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5939475888641312812, guid: ca351a2cc53c6b94f87d03d9ad9462a9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7905797065495739583, guid: ca351a2cc53c6b94f87d03d9ad9462a9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -723,10 +719,6 @@ PrefabInstance:
     - target: {fileID: 8085196204144134677, guid: ca351a2cc53c6b94f87d03d9ad9462a9, type: 3}
       propertyPath: m_Name
       value: QueenHornet
-      objectReference: {fileID: 0}
-    - target: {fileID: 8085196204144134677, guid: ca351a2cc53c6b94f87d03d9ad9462a9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca351a2cc53c6b94f87d03d9ad9462a9, type: 3}

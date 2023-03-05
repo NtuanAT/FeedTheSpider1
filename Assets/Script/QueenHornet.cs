@@ -6,36 +6,21 @@ using UnityEngine.UIElements;
 
 public class QueenHornet : MonoBehaviour
 {
-    // Setup Animation
-    public Sprite[] animationSprites;
-    public float animationTime = 0.1f;
-
-    private SpriteRenderer _spriteRenderer;
-    private int _animationIndex;
-
+   
     private Vector3 destinition;
     private float moveRate;
     private float moveSpeed;
-
+    [HideInInspector]
     LogicScript logic;
+    [HideInInspector]
     AudioManager audioManager;
     private int HitPoint;
     private float fireRate;
     private Camera cam;
 
-    private void AnimateSprite()
-    {
-        _animationIndex++;
-        if (_animationIndex >= this.animationSprites.Length)
-        {
-            _animationIndex = 0;
-        }
-
-        _spriteRenderer.sprite = this.animationSprites[_animationIndex];
-    }
+    
     void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         cam = Camera.main;
         this.HitPoint = 10;
         this.fireRate = 2.2f;
@@ -44,7 +29,6 @@ public class QueenHornet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(AnimateSprite), this.animationTime, this.animationTime);
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();        
         this.moveSpeed = 0.5f;
         moveRate = 5.0f;        

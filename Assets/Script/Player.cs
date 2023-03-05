@@ -10,47 +10,26 @@ public class Player : MonoBehaviour
     public float speed = 5.0f;
     public Projectile web;
     private bool _webActive;
-    public LogicScript logic;
+    
     private bool playerIsAlive = true;
     [HideInInspector]
     public AudioManager audioManager;
+    [HideInInspector]
+    public LogicScript logic;
 
 
     // Awake
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        audioManager = FindObjectOfType<AudioManager>();        
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        // Invoke Animation
-        InvokeRepeating(nameof(AnimateSprite), this.animationTime, this.animationTime);
     }
 
-
-    // Setup Animation
-    public Sprite[] animationSprites;
-    public float animationTime = 1.0f;
-
-    private SpriteRenderer _spriteRenderer;
-    private int _animationIndex;
-
-    private void AnimateSprite()
-    {
-        _animationIndex++;
-        if (_animationIndex >= this.animationSprites.Length)
-        {
-            _animationIndex = 0;
-        }
-
-        _spriteRenderer.sprite = this.animationSprites[_animationIndex];
-    }
-
-    
 
     // Update is called once per frame
     void Update()
@@ -73,9 +52,6 @@ public class Player : MonoBehaviour
                     this.transform.position += Vector3.right * this.speed * Time.deltaTime;
                 }
             }
-
-
-
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
                 Shoot();

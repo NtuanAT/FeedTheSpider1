@@ -30,15 +30,16 @@ public class Elite : MonoBehaviour
 
     public void GetRandomDestination()
     {
-        targetPosition = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.value, UnityEngine.Random.value, 0));
+        targetPosition = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.value, UnityEngine.Random.Range(0.25f,1f), 0));
         targetPosition.z = 0;
     }
-
+    public Action killed;
     public Projectile Coin;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Web"))
         {
+            this.killed.Invoke();
             Instantiate(this.Coin, this.transform.position, Quaternion.identity);
             this.gameObject.SetActive(false);
         }

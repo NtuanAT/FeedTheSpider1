@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 634260180322476776}
   - component: {fileID: 5939475888641312812}
   - component: {fileID: 337589696011095088}
+  - component: {fileID: 923016413}
   m_Layer: 7
   m_Name: QueenHornet
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8085196204144134677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.21, y: 4.4, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,12 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1c118b632629647ba267e45b17a112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationSprites:
-  - {fileID: -352424172, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
-  - {fileID: 345943661, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
-  - {fileID: 957867216, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
-  - {fileID: 1552502319, guid: 25b421e62ca75c344bc05ea6c4f88830, type: 3}
-  animationTime: 0.2
   poopPrefab: {fileID: 6850305805088395405, guid: 045a8a5727065af41a0af1702f905aea, type: 3}
 --- !u!70 &337589696011095088
 CapsuleCollider2D:
@@ -121,3 +116,23 @@ CapsuleCollider2D:
   m_Offset: {x: -0.00041308402, y: -0.25069052}
   m_Size: {x: 0.17626944, y: 0.23207942}
   m_Direction: 0
+--- !u!95 &923016413
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085196204144134677}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9db1bbc768502940bef45d79b703c15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

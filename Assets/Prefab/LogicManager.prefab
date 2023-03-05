@@ -50,7 +50,9 @@ MonoBehaviour:
   txtLife: {fileID: 0}
   gameOverScreen: {fileID: 0}
   gameWinScreen: {fileID: 0}
+  warningSignal: {fileID: 0}
   audioManager: {fileID: 0}
   sceneNames:
   - Level1
+  - Level2
   - LevelHell
