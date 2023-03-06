@@ -1837,7 +1837,7 @@ PrefabInstance:
       objectReference: {fileID: 1242792973}
     - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
       propertyPath: sceneNames.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
       propertyPath: sceneNames.Array.data[0]
@@ -1845,7 +1845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
       propertyPath: sceneNames.Array.data[1]
-      value: LevelHell
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 2645806007368617487, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
       propertyPath: m_Name
