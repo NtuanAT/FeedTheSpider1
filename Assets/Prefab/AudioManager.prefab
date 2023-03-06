@@ -46,48 +46,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - source: {fileID: 0}
+    outPut: {fileID: 1973613857190736774, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: Theme1
     clip: {fileID: 8300000, guid: 6f64d0f7927202242b10635d8067514c, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
   - source: {fileID: 0}
+    outPut: {fileID: 1973613857190736774, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: Theme2
     clip: {fileID: 8300000, guid: fc6f6d1144518a94e89c3fca13345081, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
   - source: {fileID: 0}
+    outPut: {fileID: 1973613857190736774, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: Theme3
     clip: {fileID: 8300000, guid: acedc16876bb993438ec1ee55042685c, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
   - source: {fileID: 0}
+    outPut: {fileID: 1973613857190736774, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: GameOver
     clip: {fileID: 8300000, guid: 4395e4638d17aaf4cbe071c9cb0c7370, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
   - source: {fileID: 0}
+    outPut: {fileID: 1973613857190736774, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: WinGame
     clip: {fileID: 8300000, guid: 198b55810f993d0439f8e4c52ef6df99, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
   - source: {fileID: 0}
+    outPut: {fileID: -1717868440139291077, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: Hurt
     clip: {fileID: 8300000, guid: 1c311a8005d528b4794e73646a0c677a, type: 3}
     volume: 0.2
     pitch: 1.5
     loop: 0
   - source: {fileID: 0}
+    outPut: {fileID: -1717868440139291077, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: Score
     clip: {fileID: 8300000, guid: 2af36743a65fba44aa90932782b6f518, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
   - source: {fileID: 0}
+    outPut: {fileID: -1717868440139291077, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: Ouch
     clip: {fileID: 8300000, guid: ab4705266ccf5d74da21a91072a6a807, type: 3}
     volume: 0.2

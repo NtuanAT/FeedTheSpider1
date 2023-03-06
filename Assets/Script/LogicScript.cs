@@ -13,8 +13,9 @@ public class LogicScript : MonoBehaviour
     public Text txtLife;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
-    public GameObject warningSignal;
+    public GameObject pauseMenu;
     public AudioManager audioManager;
+    private bool _isPause = false;
 
     public string[] sceneNames;
     private string _thisSceneName, _nextSceneName; 
@@ -29,13 +30,22 @@ public class LogicScript : MonoBehaviour
         }
         
     }
-    public void Warning()
+
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            warningSignal.SetActive(false);
+            if(_isPause)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
         }
     }
+
     public void Score(int point)
     {
         playerScore += point;
@@ -62,7 +72,10 @@ public class LogicScript : MonoBehaviour
     {
         SceneManager.LoadScene(_thisSceneName);
     }
-
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     public void NextLevel()
     {
         SceneManager.LoadScene(_nextSceneName);
@@ -70,6 +83,15 @@ public class LogicScript : MonoBehaviour
 
     public void PauseGame()
     {
-        
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+        _isPause = true;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1.0f;
+        pauseMenu.SetActive(false);
+        _isPause = false;
     }
 }

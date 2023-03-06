@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
             s.source = this.gameObject.AddComponent<AudioSource>();
+            s.source.outputAudioMixerGroup = s.outPut;
             s.source.clip = s.clip;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
@@ -21,7 +22,7 @@ public class AudioManager : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Start()
+    private void Start()    
     {
         string level = SceneManager.GetActiveScene().name;
         switch (level)
@@ -39,7 +40,7 @@ public class AudioManager : MonoBehaviour
         }
         Play(theme);
     }
-
+    
     public void Play(string name)
     {
         try
@@ -56,8 +57,6 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogWarning("Sound name: " + name + " not found!");
         }
-
-        
     }
 
     public void Stop(string name)
