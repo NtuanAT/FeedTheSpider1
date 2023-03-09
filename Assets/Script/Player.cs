@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
                     this.transform.position += Vector3.right * this.speed * Time.deltaTime;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Shoot();
             }
