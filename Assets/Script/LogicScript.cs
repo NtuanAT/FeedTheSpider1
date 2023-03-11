@@ -16,7 +16,7 @@ public class LogicScript : MonoBehaviour
 	public GameObject gameWinScreen;
 	public GameObject pauseMenu;
 	public AudioManager audioManager;
-	private bool _isPause = false;
+	private bool _isPause;
 
 	public string[] sceneNames;
 	private string _thisSceneName, _nextSceneName;
@@ -29,7 +29,8 @@ public class LogicScript : MonoBehaviour
 		{
 			_nextSceneName = sceneNames[i + 1];
 		}
-
+		Time.timeScale = 1.0f;	
+		_isPause = false;
 	}
 
 	private void Update()

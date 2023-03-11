@@ -9,6 +9,9 @@ public class OptionsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     Resolution[] resolutions;
     public Dropdown resolutionDropdown;
+    public Slider masterVolumn;
+    public Slider sfxVolumn;
+    public Slider musicVolumn;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,14 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-    }
+
+        audioMixer.GetFloat("MasterVolumn", out float master);
+        masterVolumn.value = master;
+		audioMixer.GetFloat("SFXVolumn", out float sfx);
+		sfxVolumn.value = sfx;
+		audioMixer.GetFloat("MusicVolumn", out float music);
+		musicVolumn.value = music;
+	}
 
     // Update is called once per frame
     void Update()

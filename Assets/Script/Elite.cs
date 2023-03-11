@@ -13,7 +13,7 @@ public class Elite : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating(nameof(GetRandomDestination), this.moveRate, this.moveRate);
+        InvokeRepeating(nameof(GetRandomDestination), 1.0f, this.moveRate);
     }
 
     void Update()
