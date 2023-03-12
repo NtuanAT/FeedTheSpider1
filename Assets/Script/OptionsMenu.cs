@@ -12,9 +12,11 @@ public class OptionsMenu : MonoBehaviour
     public Slider masterVolumn;
     public Slider sfxVolumn;
     public Slider musicVolumn;
+    public GameObject backMenu;
     // Start is called before the first frame update
     void Start()
     {
+        
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
@@ -47,9 +49,9 @@ public class OptionsMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && this.gameObject.activeInHierarchy)
         {
-            this.gameObject.SetActive(false);
-            
-        }
+            this.backMenu.SetActive(true);
+			this.gameObject.SetActive(false);
+		}
     }
 
     public void SetResolution(int resolutionIndex)
