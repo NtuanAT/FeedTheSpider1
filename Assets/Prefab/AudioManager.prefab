@@ -76,7 +76,7 @@ MonoBehaviour:
   - source: {fileID: 0}
     outPut: {fileID: 1973613857190736774, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: WinGame
-    clip: {fileID: 8300000, guid: 198b55810f993d0439f8e4c52ef6df99, type: 3}
+    clip: {fileID: 8300000, guid: 0e044f0644ce08449b2f91eb1685e735, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0

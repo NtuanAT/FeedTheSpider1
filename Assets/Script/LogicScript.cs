@@ -15,6 +15,7 @@ public class LogicScript : MonoBehaviour
 	public GameObject gameOverScreen;
 	public GameObject gameWinScreen;
 	public GameObject pauseMenu;
+	public Animator levelLoader;
 	public AudioManager audioManager;
 	private bool _isPause;
 
@@ -22,8 +23,8 @@ public class LogicScript : MonoBehaviour
 	private string _thisSceneName, _nextSceneName;
 	private void Awake()
 	{
-		audioManager = FindObjectOfType<AudioManager>();
 		_thisSceneName = SceneManager.GetActiveScene().name;
+		audioManager = FindObjectOfType<AudioManager>();
 		int i = Array.FindIndex<string>(sceneNames, s => s == _thisSceneName);
 		if (i < sceneNames.Length - 1)
 		{
@@ -39,17 +40,12 @@ public class LogicScript : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				if (_isPause)
-				{
-					ResumeGame();
-				}
-				else
+				if (!_isPause)
 				{
 					PauseGame();
 				}
-			}
-		}
-		
+			}			
+		}		
 	}
 
 	public void Score(int point)
@@ -60,6 +56,11 @@ public class LogicScript : MonoBehaviour
 	public void LoseLife(int health)
 	{
 		playerLife -= health;
+		txtLife.text = playerLife.ToString();
+	}
+	public void AddLife(int health)
+	{
+		playerLife += health;
 		txtLife.text = playerLife.ToString();
 	}
 	public void GameOver()
@@ -76,18 +77,31 @@ public class LogicScript : MonoBehaviour
 		_isPlaying = false;
 		gameWinScreen.SetActive(true);
 	}
+	//Routine Load Level
+	IEnumerator LoadLevel(string sceneName)
+	{
+		levelLoader.SetTrigger("Start");
+		Time.timeScale = 1.0f;
+		// Get the animation length
+		float animationLength = levelLoader.GetCurrentAnimatorStateInfo(0).length;
+
+		// Wait for the animation to finish playing
+		yield return new WaitForSeconds(animationLength);
+		SceneManager.LoadScene(sceneName);
+	}
 	public void RestartGame()
 	{
-		SceneManager.LoadScene(_thisSceneName);
+		StartCoroutine(LoadLevel(_thisSceneName));
 	}
 	public void LoadMenu()
 	{
-		SceneManager.LoadScene("StartMenu");
+		StartCoroutine(LoadLevel("StartMenu"));
 	}
 	public void NextLevel()
 	{
-		SceneManager.LoadScene(_nextSceneName);
+		StartCoroutine(LoadLevel(_nextSceneName));
 	}
+	
 
 	public void PauseGame()
 	{

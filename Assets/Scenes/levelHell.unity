@@ -256,6 +256,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1221934730}
     - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 489716039}
+    - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 831697508}
@@ -277,6 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
+--- !u!95 &489716039 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8649192657384881728, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
+  m_PrefabInstance: {fileID: 1221934725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &831697507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,46 +586,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 896175577519110409, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
+    - target: {fileID: 146389672421514327, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 24315984}
     - target: {fileID: 896175577519110409, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175577977861883, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 24315984}
     - target: {fileID: 896175577977861883, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175578684584987, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 24315984}
     - target: {fileID: 896175578684584987, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175578684584987, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LogicScript, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175578684584987, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175578948291473, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 24315984}
     - target: {fileID: 896175578948291473, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 24315984}
     - target: {fileID: 896175579206794422, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_Name
       value: UICentral
@@ -705,46 +694,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 896175579256406265, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 896175579308676069, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_Name
       value: RestartButton
       objectReference: {fileID: 0}
-    - target: {fileID: 896175579308676069, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 896175579308676071, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 24315984}
-    - target: {fileID: 896175579308676071, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175579377105105, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 896175579383782532, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 24315984}
-    - target: {fileID: 896175579383782532, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 3257866867332512492, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_text
       value: Restart
       objectReference: {fileID: 0}
-    - target: {fileID: 3881465234105538251, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: backMenu
-      value: 
-      objectReference: {fileID: 1221934730}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
 --- !u!1 &1221934726 stripped

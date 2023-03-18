@@ -10,6 +10,7 @@ public class Elite : MonoBehaviour
     private float stoppingDistance = 0;
 
     private Vector3 targetPosition;
+    public GameObject DeathAnim;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class Elite : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Web"))
         {
             this.killed.Invoke();
+            Instantiate(this.DeathAnim,this.transform.position,Quaternion.identity);
             Instantiate(this.Coin, this.transform.position, Quaternion.identity);
             this.gameObject.SetActive(false);
         }

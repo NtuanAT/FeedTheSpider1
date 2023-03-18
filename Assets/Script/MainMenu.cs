@@ -5,13 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public Animator levelLoader;
+	//Routine Load Level
+	IEnumerator LoadLevel(string sceneName)
+	{
+		levelLoader.SetTrigger("Start");
+		yield return new WaitForSeconds(1);
+		SceneManager.LoadScene(sceneName);
+	}
+	public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        StartCoroutine(LoadLevel("Level1"));
     }
 
     public void ExitGame()
     {
         Application.Quit();
+        //Debug.Log("Quit");
     }
 }

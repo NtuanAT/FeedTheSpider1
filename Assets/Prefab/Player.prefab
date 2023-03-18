@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   web: {fileID: 6638654592817994449, guid: 43e6eccc419875f4ea7e8e6d6d238478, type: 3}
+  addHeart: {fileID: 5570661833371944096, guid: 26249f6b843752b47a7feed933477766, type: 3}
   audioManager: {fileID: 0}
   logic: {fileID: 0}
 --- !u!61 &6811556566242736345

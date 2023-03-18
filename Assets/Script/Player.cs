@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     public float speed = 5.0f;
     public Projectile web;
+    //public GameObject addHeart;
     private bool _webActive;
     
     private bool playerIsAlive = true;
@@ -92,8 +93,13 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Reward"))
         {
-            logic.Score(500);
+            logic.Score(50);
             audioManager.Play("Score");
+            if (logic.playerScore % 1000 == 0)
+            {
+                logic.AddLife(1);
+                //Instantiate(this.addHeart, this.transform.position, Quaternion.identity);
+            }
         }
     }
     

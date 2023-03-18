@@ -193,14 +193,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 146389672421514327, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1327323548}
+    - target: {fileID: 146389672421514327, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 146389672421514327, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LogicScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 896175577519110409, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1327323548}
-    - target: {fileID: 896175577519110409, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 896175577977861883, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -209,26 +217,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1327323548}
-    - target: {fileID: 896175578684584987, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175578684584987, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LogicScript, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 896175578684584987, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 896175578948291473, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1327323548}
-    - target: {fileID: 896175578948291473, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
-      objectReference: {fileID: 0}
     - target: {fileID: 896175579206794422, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
       propertyPath: m_Name
       value: UICentral
@@ -329,16 +321,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1327323548}
-    - target: {fileID: 896175579383782532, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3881465234105538251, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
-      propertyPath: backMenu
-      value: 
-      objectReference: {fileID: 1978663274}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
+--- !u!95 &745445974 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8649192657384881728, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
+  m_PrefabInstance: {fileID: 203790477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &875120314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 896175577946504925, guid: 12d577a96957e834b80db9db46e5e433, type: 3}
@@ -696,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689098627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12.09, z: -1}
+  m_LocalPosition: {x: 0, y: 12.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -723,21 +712,21 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: 0.711681
-      outSlope: 0.711681
+      value: 1.5
+      inSlope: 1.794902
+      outSlope: 1.794902
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.1391863
+      outWeight: 0.11563169
     - serializedVersion: 3
       time: 1
       value: 6
-      inSlope: 11.684589
-      outSlope: 11.684589
+      inSlope: -0.16118446
+      outSlope: -0.16118446
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.049250543
+      inWeight: 0.26338327
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -887,6 +876,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1978663274}
+    - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 745445974}
     - target: {fileID: 2645806007368617486, guid: 51299df0aee4f4a4e97ae1f86480fcc8, type: 3}
       propertyPath: audioManager
       value: 

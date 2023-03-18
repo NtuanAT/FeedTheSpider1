@@ -125,8 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dc25c410f030c478692c599b7a8e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
   moveRate: 3
+  DeathAnim: {fileID: 7032851070348166156, guid: 1e2930d89ff72ff4f822249d9cd17b58, type: 3}
   Coin: {fileID: 5940469792281467255, guid: d07b7ffcec747da41bcc8a1aa8bc6020, type: 3}
 --- !u!95 &5036501583506141637
 Animator:

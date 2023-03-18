@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coin: {fileID: 5940469792281467255, guid: d07b7ffcec747da41bcc8a1aa8bc6020, type: 3}
+  DeathAnim: {fileID: 7032851070348166156, guid: 1e2930d89ff72ff4f822249d9cd17b58, type: 3}
 --- !u!95 &3852742678804450050
 Animator:
   serializedVersion: 5
