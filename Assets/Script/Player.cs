@@ -99,6 +99,7 @@ public class Player : MonoBehaviour
             {
                 logic.AddLife(1);
                 //Instantiate(this.addHeart, this.transform.position, Quaternion.identity);
+                audioManager.Play("AddHeart");
             }
         }
     }

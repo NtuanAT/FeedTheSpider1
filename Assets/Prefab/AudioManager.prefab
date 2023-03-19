@@ -65,7 +65,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: acedc16876bb993438ec1ee55042685c, type: 3}
     volume: 0.1
     pitch: 1
-    loop: 0
+    loop: 1
   - source: {fileID: 0}
     outPut: {fileID: 1973613857190736774, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: GameOver
@@ -98,6 +98,13 @@ MonoBehaviour:
     outPut: {fileID: -1717868440139291077, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
     name: Ouch
     clip: {fileID: 8300000, guid: ab4705266ccf5d74da21a91072a6a807, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+  - source: {fileID: 0}
+    outPut: {fileID: -1717868440139291077, guid: cb62c30b57bd5aa4e98920242249ba41, type: 2}
+    name: AddHeart
+    clip: {fileID: 8300000, guid: cb5fff41d0d8f1943b4eccc6c08fe5af, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0

@@ -68,6 +68,7 @@ public class LogicScript : MonoBehaviour
 		audioManager.Stop(audioManager.theme);
 		audioManager.Play("GameOver");
 		_isPlaying = false;
+		Time.timeScale = 0f;
 		gameOverScreen.SetActive(true);
 	}
 	public void WinGame()
@@ -75,13 +76,14 @@ public class LogicScript : MonoBehaviour
 		audioManager.Stop(audioManager.theme);
 		audioManager.Play("WinGame");
 		_isPlaying = false;
-		gameWinScreen.SetActive(true);
+        Time.timeScale = 0f;
+        gameWinScreen.SetActive(true);
 	}
 	//Routine Load Level
 	IEnumerator LoadLevel(string sceneName)
 	{
-		levelLoader.SetTrigger("Start");
 		Time.timeScale = 1.0f;
+		levelLoader.SetTrigger("Start");
 		// Get the animation length
 		float animationLength = levelLoader.GetCurrentAnimatorStateInfo(0).length;
 
